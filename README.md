@@ -1,0 +1,1 @@
+# Mechack-work-for-datastructure-and-algorthim
