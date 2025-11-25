@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+       background-color: #5c72e2;
+       
+    }
+    h1 {
+        color: #333;
+        text-align: center;
+        margin-top: 100px;
+
+    }
+    #factorialForm{
+        background: rgb(36, 123, 181);
+        
+        padding: 20px;
+        text-align: center;
+        margin-top: 0px;
+        box-shadow: 10px 10px 90px rgba(121, 212, 10, 0.2);
+    }
+    a{
+        text-decoration: none;
+        font-size: 38px;
+        font-weight: bold;
+        text-decoration: underline;
+        color: yellow;
+        background-color: purple;
+        box-shadow: 5px 10px 8px rgb(2, 2, 3);
+        padding: 20px;
+        border-radius: 30px;
+        margin-top: 50px;
+        display: inline-block;
+        
+    }
+    </style>
+<body>
+    <h1>Factorial Function</h1>
+    <form id="factorialForm">
+        <label for="numberInput"></label><br>
+        <input type="number" id="numberInput" name="numberInput" placeholder="Enter a number:" required ><br><br>
+        <input type="submit" value="Calculate Factorial">
+    </form>
+    <div id="result"></div>
+
+    <a href="./all.html"><span>Back to All</span></a>
+    <script>
+        document.getElementById('factorialForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const number = parseInt(document.getElementById('numberInput').value);
+            let factorial = 1;
+            for (let i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+            document.getElementById('result').innerText = `Factorial of ${number} is ${factorial}`;
+        });
+    </script>
+</body>
+</html>
